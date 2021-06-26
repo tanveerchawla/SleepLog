@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs</title>
+    <link rel="stylesheet" href="/static/CSS/main.css">
+</head>
+
+  <script>
+    $("#login-button").click(function(event){
+        event.preventDefault();
+    
+    $('form').fadeOut(500);
+    $('.wrapper').addClass('form-success');
+});
+  </script>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Welcome</h1>
+            Date:{{date.d2}}
+            <form class="form">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <b>Start Time</b> <input type='time'>
+                <b>End</b> Time<input type='time' >
+                <label><b>Enter the Log :</b></label>
+                    <br>
+                <textarea id="log" name="log" rows="20" cols="100"></textarea>
+                <br>
+                <button type="submit" id="login-button">Save</button>
+                <button type="submit" id="login-button">Show all Logs</button>
+            </form>
+        </div>
+        
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
